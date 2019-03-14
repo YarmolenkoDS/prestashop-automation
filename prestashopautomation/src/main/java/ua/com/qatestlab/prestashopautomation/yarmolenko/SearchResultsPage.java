@@ -13,15 +13,13 @@ public class SearchResultsPage {
     private WebDriver driver;
 
     /**
-     *
-     * Установленное условие для сортировки товаров
+     * The selected condition for sorting goods
      */
     @FindBy(xpath = "//a[@class=\"select-title\"]")
     private WebElement selectedSortCondition;
 
     /**
-     *
-     * Список выбора условия для сортировки товаров
+     * Selection list of conditions for sorting goods
      */
     @FindBy(xpath = "//div[@class=\"dropdown-menu\"]//a")
     private List<WebElement> dropDawnListOfSortConditions;
@@ -32,8 +30,7 @@ public class SearchResultsPage {
     }
 
     /**
-     *
-     * Метод для получения списка выбора условий для сортировки товаров
+     * Method to get a list of selection conditions for sorting goods
      */
     private List<WebElement> getDropDawnListOfSortConditions() {
         selectedSortCondition.click();
@@ -43,8 +40,7 @@ public class SearchResultsPage {
     }
 
     /**
-     *
-     * Метод для установки условия для сортировки товаров
+     * Method for seting condition for sorting goods
      */
     public void setTheSortCondition(String sortCondition) throws InterruptedException {
 

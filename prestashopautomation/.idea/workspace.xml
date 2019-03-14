@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb56abea-b1c9-4da3-8caa-d2ee18db7dbc" name="Default Changelist" comment="" />
+    <list default="true" id="eb56abea-b1c9-4da3-8caa-d2ee18db7dbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/ProductCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/ProductCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/SearchResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ua/com/qatestlab/prestashopautomation/yarmolenko/test/PrestashopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/com/qatestlab/prestashopautomation/yarmolenko/test/PrestashopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/com/qatestlab/prestashopautomation/yarmolenko/Header.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/com/qatestlab/prestashopautomation/yarmolenko/Header.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/com/qatestlab/prestashopautomation/yarmolenko/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/com/qatestlab/prestashopautomation/yarmolenko/MainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/com/qatestlab/prestashopautomation/yarmolenko/ProductCards.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/com/qatestlab/prestashopautomation/yarmolenko/ProductCards.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ua/com/qatestlab/prestashopautomation/yarmolenko/SearchResultsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/com/qatestlab/prestashopautomation/yarmolenko/SearchResultsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ua/com/qatestlab/prestashopautomation/yarmolenko/test/PrestashopTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ua/com/qatestlab/prestashopautomation/yarmolenko/test/PrestashopTest.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +31,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="6" />
+          <entry key="PLAIN_TEXT" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="415" />
         </counts>
       </usages-collector>
     </session>
@@ -29,20 +48,75 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ua/com/qatestlab/prestashopautomation/yarmolenko/test/PrestashopTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1030">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="1197">
+              <caret line="101" column="25" lean-forward="true" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
+              <folding>
+                <element signature="e#5440#5441#0" expanded="true" />
+                <element signature="e#5469#5470#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/Header.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/MainPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/ProductCards.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-334">
+              <caret line="129" column="44" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/SearchResultsPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/ua/com/qatestlab/prestashopautomation/yarmolenko/test/EventHandler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ua/com/qatestlab/prestashopautomation/yarmolenko/test/PrestashopTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/Header.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/MainPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/SearchResultsPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/ProductCards.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="10" />
-    <option name="y" value="20" />
     <option name="width" value="1260" />
-    <option name="height" value="944" />
+    <option name="height" value="984" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -60,6 +134,27 @@
               <item name="prestashop-automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="prestashopautomation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prestashop-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prestashopautomation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prestashop-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prestashopautomation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prestashop-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="prestashopautomation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="yarmolenko" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="prestashop-automation" type="b2602c69:ProjectViewProjectNode" />
@@ -90,7 +185,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552560289785" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552578969189" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -106,7 +201,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PrestashopTest.testContents">
+    <configuration name="PrestashopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="prestashop-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.com.qatestlab.prestashopautomation.yarmolenko.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.com.qatestlab.prestashopautomation.yarmolenko.test" />
+      <option name="MAIN_CLASS_NAME" value="ua.com.qatestlab.prestashopautomation.yarmolenko.test.PrestashopTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PrestashopTest.testContents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="prestashop-automation" />
       <extension name="coverage">
@@ -123,9 +232,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.PrestashopTest.testContents" />
+      <item itemvalue="JUnit.PrestashopTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PrestashopTest.testContents" />
+        <item itemvalue="JUnit.PrestashopTest" />
       </list>
     </recent_temporary>
   </component>
@@ -142,16 +256,44 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="PrestashopTest_testContents - 2019.03.14 at 12h 45m 10s.xml">
+      <configuration name="PrestashopTest.testContents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrestashopTest - 2019.03.14 at 14h 52m 23s.xml">
+      <configuration name="PrestashopTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrestashopTest - 2019.03.14 at 15h 11m 47s.xml">
+      <configuration name="PrestashopTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrestashopTest_testContents - 2019.03.14 at 15h 27m 42s.xml">
+      <configuration name="PrestashopTest.testContents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrestashopTest_testContents - 2019.03.14 at 15h 57m 01s.xml">
+      <configuration name="PrestashopTest.testContents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrestashopTest_testContents - 2019.03.14 at 16h 04m 58s.xml">
+      <configuration name="PrestashopTest.testContents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrestashopTest_testContents - 2019.03.14 at 16h 07m 07s.xml">
+      <configuration name="PrestashopTest.testContents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrestashopTest_testContents - 2019.03.14 at 17h 45m 57s.xml">
+      <configuration name="PrestashopTest.testContents" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrestashopTest_testContents - 2019.03.14 at 17h 53m 17s.xml">
+      <configuration name="PrestashopTest.testContents" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="20" width="1260" height="944" extended-state="0" />
-    <editor active="true" />
+    <frame x="10" y="0" width="1260" height="984" extended-state="0" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
@@ -159,7 +301,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32881773" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3544601" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -178,10 +320,64 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar!/org/openqa/selenium/support/events/WebDriverEventListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/com/qatestlab/prestashopautomation/yarmolenko/test/EventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="150" column="34" lean-forward="true" selection-start-line="150" selection-start-column="34" selection-end-line="150" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4358#4359#0" expanded="true" />
+            <element signature="e#4383#4384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChromeLogs.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/SearchResultsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/MainPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/Header.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/qatestlab/prestashopautomation/yarmolenko/ProductCards.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-334">
+          <caret line="129" column="44" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ua/com/qatestlab/prestashopautomation/yarmolenko/test/PrestashopTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1030">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="1197">
+          <caret line="101" column="25" lean-forward="true" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
+          <folding>
+            <element signature="e#5440#5441#0" expanded="true" />
+            <element signature="e#5469#5470#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

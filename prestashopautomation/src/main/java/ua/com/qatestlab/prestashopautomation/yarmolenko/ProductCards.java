@@ -14,39 +14,39 @@ public class ProductCards {
 
     private WebDriver driver;
     /**
-     * Карточки товаров на странице
+     * Cards of goods on the page
      */
     @FindBy(xpath = "//div[@class=\"thumbnail-container\"]")
     private List<WebElement> productCardsList;
 
     /**
-     * Список цен карточек товаров на странице
+     * List of prices from product cards per page
      */
     @FindBy(xpath = "//span[@class=\"price\"]")
     static List<WebElement> productCardsPriceList;
 
     /**
-     * Локатор для текущей цены товара
+     * Locator by current  price of product
      */
     static By productPrice = By.xpath(".//span[@class=\"price\"]");
 
     /**
-     * Локатор для азвания товара
+     * Locator by product name
      */
     private By productName = By.xpath(".//div[@class=\"product-description\"]//a");
 
     /**
-     * Локатор для скидки на товар
+     * Locator by product discont
      */
     private By discontOnProductCard = By.xpath(".//span[@class=\"discount-percentage\"]");
 
     /**
-     * Локатор для цені товара без скидки
+     * Locator by product price without discont
      */
     private By productPriceWithoutDiscont = By.xpath(".//span[@class=\"regular-price\"]");
 
     /**
-     * Конструктор
+     * Constructor
      */
     public ProductCards(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -54,14 +54,14 @@ public class ProductCards {
     }
 
     /**
-     * Метод для получения списка карточек товаров на странице
+     * Method to get a list of product cards on the page
      */
     public List<WebElement> getProductCardsList() {
         return productCardsList;
     }
 
     /**
-     * Метод для получения символа валюты цены у карточек товаров
+     * Method to get the currency symbol of price cards
      */
     public String getCurrencyOfProductCardsPrice() {
         String result = "";
@@ -70,7 +70,7 @@ public class ProductCards {
         for (WebElement we : getProductCardsList()) {
             String wePrice = we.findElement(productPrice).getText();
             if (!wePrice.substring(wePrice.length() - 1).equals("" + cuurencySymbol)) {
-                throw new IllegalArgumentException("Валюта цен во всех карточках товаров должна быть одинаковой ");
+                throw new IllegalArgumentException("The price currency in all commodity cards must be the same ");
             }
         }
             switch (cuurencySymbol) {
@@ -88,7 +88,7 @@ public class ProductCards {
     }
 
     /**
-     * Метод для проверка сортировки товаров по цене от высокой к низкой без скидки
+     * Method for checking the sorting of goods by price from high to low without discount
      */
     public boolean areSortedFromHighToLowPricesWithoutDiscount() {
         boolean flag = false;
@@ -116,24 +116,25 @@ public class ProductCards {
     }
 
     /**
-     * Метод для проверки, что у товаров со скидкой указана скидка в процентах вместе с ценой до и после скидки
+     *
+     * Method to check that the discount items have a percentage discount with the price before and after the discount
      */
     public String infoAboutProductsWithDiscount() {
         StringBuilder sb = new StringBuilder();
         for (WebElement we : getProductCardsList()) {
 
             if (we.getText().contains("%")) {
-                sb.append("Товар:\"").append(we.findElement(productName).getText())
-                        .append("\". Старая цена:").append(we.findElement(productPriceWithoutDiscont).getText())
-                        .append(". Скидка:").append(we.findElement(discontOnProductCard).getText())
-                        .append(". Новая цена:").append(we.findElement(productPrice).getText()).append("\n");
+                sb.append("Product:\"").append(we.findElement(productName).getText())
+                        .append("\". Old price:").append(we.findElement(productPriceWithoutDiscont).getText())
+                        .append(". Discont:").append(we.findElement(discontOnProductCard).getText())
+                        .append(". New price:").append(we.findElement(productPrice).getText()).append("\n");
             }
         }
         return sb.toString();
     }
 
     /**
-     * Метод для проверки, что цена до и после скидки совпадает с указанным размером скидки
+     * Method to verify that the price before and after the discount matches the specified discount size
      */
     public boolean checkingPricesConsideringDiscounts() {
         boolean flag = true;
@@ -163,7 +164,7 @@ public class ProductCards {
     }
 
     /**
-     * Метод для округления числа float до заданного количества знаков после запятой
+     * Method for rounding the number of float to a specified number of decimal places
      */
     private float round(float number, int scale) {
         int pow = 10;
@@ -174,7 +175,7 @@ public class ProductCards {
     }
 
     /**
-     * Метод для получения строки списка цен карточек товаров на странице с учётом скидки
+     * Method for getting a string of the list of prices for product cards on the page with discount
      */
     public String getProductCardsPriceListWithDiscont() {
         StringBuilder sb = new StringBuilder();
@@ -186,7 +187,7 @@ public class ProductCards {
     }
 
     /**
-     * Метод для получения строки списка цен карточек товаров на странице без скидки
+     * Method for getting a string of the list of prices of products on the page without discount
      */
     public String getProductCardsPriceListWithoutDiscount() {
         StringBuilder sb = new StringBuilder();

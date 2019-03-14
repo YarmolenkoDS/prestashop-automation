@@ -14,22 +14,19 @@ public class MainPage {
     private WebDriver driver;
 
     /**
-     *
-     * Поле ввода текста для поиска в каталоге
+     * The field for entering text to search in the catalog of goods
      */
     @FindBy(xpath = "//input [@name=\"s\"]")
     private WebElement inputSearchField;
 
     /**
-     *
-     * Кнопка для поиска в каталоге
+     * Button to search the catalog of goods
      */
     @FindBy(xpath = "//button[@type=\"submit\"]")
     private WebElement searchButton;
 
     /**
-     *
-     * Конструктор
+     * Constructor
      */
     public MainPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -37,8 +34,7 @@ public class MainPage {
     }
 
     /**
-     *
-     * Метод для получения символа установленной валюты в шапке сайта
+     * Method to get the symbol of the installed currency in the header of the site
      */
     public SearchResultsPage searchInCatalog(String wordForSearch) {
         inputSearchField.sendKeys(wordForSearch);

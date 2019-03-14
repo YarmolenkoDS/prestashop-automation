@@ -13,22 +13,19 @@ public class Header {
     private WebDriver driver;
 
     /**
-     *
-     * Установленная валюта в шапке сайта
+     * Installed currency in the site header
      */
     @FindBy(xpath = "//span[@class=\"expand-more _gray-darker hidden-sm-down\"]")
     private WebElement selectedCurrency;
 
     /**
-     *
-     * Список выбора валюты в шапке сайта
+     * The list of currency choices in the site header
      */
     @FindBy(xpath = "//div[@class=\"currency-selector dropdown js-dropdown open\"]//a[@class=\"dropdown-item\"]")
     private List<WebElement> dropDawnListOfCurrency;
 
     /**
-     *
-     * Конструктор
+     * Constructor
      */
     public Header(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -36,16 +33,14 @@ public class Header {
     }
 
     /**
-     *
-     * Метод для получения символа установленной валюты в шапке сайта
+     * Method to get the symbol of the installed currency in the header of the site
      */
     public String getSelectedCurrency() {
         return selectedCurrency.getText();
     }
 
     /**
-     *
-     * Метод для получения списка выбора валюты в шапке сайта
+     * Method to get a list of currency choices in the site header
      */
     private List<WebElement> getDropDawnListOfCurrency() {
         selectedCurrency.click();
@@ -55,8 +50,7 @@ public class Header {
     }
 
     /**
-     *
-     * Метод для установки валюты в шапке в шапке сайта
+     * Method to set the currency in the header in the site header
      */
     public void setTheCurrencyOfPrices(String currency) {
         for (WebElement we : getDropDawnListOfCurrency()) {

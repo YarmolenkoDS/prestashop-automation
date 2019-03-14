@@ -37,68 +37,69 @@ public class PrestashopTest {
         ProductCards productCards = new ProductCards(driver);
         Header header = new Header(driver);
 
-        System.out.println("Валюта в шапке сайта :" + header.getSelectedCurrency());
-        System.out.println("Валюта карточек товара:" + productCards.getCurrencyOfProductCardsPrice());
+        System.out.println("Currency in the site header:" + header.getSelectedCurrency());
+        System.out.println("Product cards currency:" + productCards.getCurrencyOfProductCardsPrice());
         System.out.println(productCards.getProductCardsPriceListWithDiscont());
-        Assert.assertTrue("Несоответствие валют в шапке и на карточках",(header
+        Assert.assertTrue("The mismatch of currencies in the header and on the cards",(header
                 .getSelectedCurrency()).contains(productCards.getCurrencyOfProductCardsPrice()));
-        System.out.println("Проверка на соответствие валют в шапке и на карточках товаров");
+        System.out.println("Check for compliance with currencies in the header and on the cards of goods");
 
         System.out.println("-------------------------------------------------------------------------");
 
         header.setTheCurrencyOfPrices("USD");
-        System.out.println("Валюта в шапке сайта :" + header.getSelectedCurrency());
-        System.out.println("Установили валюту USD");
+        System.out.println("Currency in the site header:" + header.getSelectedCurrency());
+        System.out.println("Set the currency USD");
 
         System.out.println("-------------------------------------------------------------------------");
 
         SearchResultsPage searchResultsPage = mainPage.searchInCatalog("dress");
-        System.out.println("Произвели поиск в каталоге товаров по слову \"dress\"");
+        System.out.println("Searched the product catalog by word \"dress\"");
 
         System.out.println("-------------------------------------------------------------------------");
 
-        Assert.assertTrue("Страница \"Результаты поиска\" не содержит надпись \"Товаров: \"" + productCards
-                .getProductCardsList().size(),driver.getPageSource().contains("Товаров: " + productCards
+        Assert.assertTrue("Page \"Результаты поиска\" does not contain an inscription \"Товаров: \""
+                + productCards.getProductCardsList().size(),driver.getPageSource().contains("Товаров: " + productCards
                 .getProductCardsList().size()));
-        System.out.println("Страница \"Результаты поиска\" содержит надпись \"Товаров: " + productCards
+        System.out.println("Page \"Результаты поиска\" contains an inscription \"Товаров: " + productCards
                 .getProductCardsList().size() + "\" : " + driver.getPageSource().contains("Товаров: " + productCards
                 .getProductCardsList().size()));
-        System.out.println("Проверка, что страница \"Результаты поиска\" содержит надпись \"Товаров: x\","
-                        + "\n где x - количество действительно найденных товаров");
+        System.out.println("Check that page \"Результаты поиска\" contains an inscription \"Товаров: x\","
+                        + "\nwhere x - the number of actually found goods");
 
         System.out.println("-------------------------------------------------------------------------");
 
-        System.out.println("Валюта карточек товара:" + productCards.getCurrencyOfProductCardsPrice());
+        System.out.println("Product cards currency:" + productCards.getCurrencyOfProductCardsPrice());
         System.out.println(productCards.getProductCardsPriceListWithDiscont());
-        Assert.assertEquals("Валюта карточек товара не доллар", "USD", productCards
+        Assert.assertEquals("The currency of the commodity cards is not a dollar", "USD", productCards
                 .getCurrencyOfProductCardsPrice());
-        System.out.println("Проверка, что цены товаров указаны в USD");
+        System.out.println("Check that the prices of goods are in USD");
 
         System.out.println("-------------------------------------------------------------------------");
 
         searchResultsPage.setTheSortCondition("от высокой к низкой");
         System.out.println(productCards.getProductCardsPriceListWithDiscont());
-        System.out.println("Сортировка товаров по цене от высокой к низкой");
+        System.out.println("Sort goods from high to low prices");
 
         System.out.println("-------------------------------------------------------------------------");
 
-        Assert.assertTrue("Сортировка товаров по цене от высокой к низкой без скидки не верна",productCards
+        Assert.assertTrue("The goods sorting from high to low prices without discount is not true",productCards
                         .areSortedFromHighToLowPricesWithoutDiscount());
         System.out.println(productCards.getProductCardsPriceListWithoutDiscount());
-        System.out.println("Проверка оортировки товаров по цене от высокой к низкой без скидки");
+        System.out.println("Checking the sorting of goods at high to low prices without discount");
 
         System.out.println("-------------------------------------------------------------------------");
 
         System.out.println(productCards.infoAboutProductsWithDiscount());
-        System.out.println("Проверка, что у товаров со скидкой указана скидка в процентах вместе "
-                + "с ценой до и после скидки");
+        System.out.println("\n" +
+                "Check that the discounted products have a percentage discount with the price before"
+                + " and after the discount");
 
         System.out.println("-------------------------------------------------------------------------");
 
-        Assert.assertTrue("Цена до и после скидки не совпадает с указанным размером скидки",productCards
-                .checkingPricesConsideringDiscounts());
-        System.out.println("Цена до и после скидки совпадает с указанным размером скидки"
-                + " (если округлить\n до двух знаков после запятой):   " + productCards
+        Assert.assertTrue("Price before and after the discount does not match the specified discount"
+                + " size",productCards.checkingPricesConsideringDiscounts());
+        System.out.println("The price before and after the discount coincides with the specified discount amount."
+                + " (if round up\n to two decimal places):   " + productCards
                 .checkingPricesConsideringDiscounts());
 
         System.out.println("-------------------------------------------------------------------------");
