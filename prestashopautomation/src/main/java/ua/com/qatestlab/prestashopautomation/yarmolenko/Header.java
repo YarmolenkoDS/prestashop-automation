@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
+/**
+ * The type Header to discribe of the site header
+ */
 public class Header {
     private WebDriver driver;
 
@@ -33,14 +36,18 @@ public class Header {
     }
 
     /**
-     * Method to get the symbol of the installed currency in the header of the site
+     * Method to get the installed currency in the header of the site
+     *
+     * @return the installed currency in the header of the site
      */
     public String getSelectedCurrency() {
         return selectedCurrency.getText();
     }
 
     /**
-     * Method to get a list of currency choices in the site header
+     * Method to get the list of currency choices in the site header
+     *
+     * @return the list of currency choices in the site header
      */
     private List<WebElement> getDropDawnListOfCurrency() {
         selectedCurrency.click();
@@ -51,12 +58,20 @@ public class Header {
 
     /**
      * Method to set the currency in the header in the site header
+     *
+     * @param currency is the string "USD" or "UAH" or "EUR"
+     * @throws IllegalArgumentException the illegal argument exception
      */
-    public void setTheCurrencyOfPrices(String currency) {
-        for (WebElement we : getDropDawnListOfCurrency()) {
-            if (we.getText().contains(currency)) {
-                we.click();
+    public void setTheCurrencyOfPrices(String currency) throws IllegalArgumentException {
+        if (currency.equals("USD") || currency.equals("UAH") || currency.equals("EUR")) {
+            for (WebElement we : getDropDawnListOfCurrency()) {
+                if (we.getText().contains(currency)) {
+                    we.click();
+                }
             }
+        } else {
+            throw new IllegalArgumentException("The method parameter must be the"
+                    + " string \"USD\" or \"UAH\" or \"EUR\"");
         }
     }
 }

@@ -10,6 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
+/**
+ * The type ProductCards to discribe of the product cards
+ */
 public class ProductCards {
 
     private WebDriver driver;
@@ -20,15 +23,9 @@ public class ProductCards {
     private List<WebElement> productCardsList;
 
     /**
-     * List of prices from product cards per page
-     */
-    @FindBy(xpath = "//span[@class=\"price\"]")
-    static List<WebElement> productCardsPriceList;
-
-    /**
      * Locator by current  price of product
      */
-    static By productPrice = By.xpath(".//span[@class=\"price\"]");
+    private By productPrice = By.xpath(".//span[@class=\"price\"]");
 
     /**
      * Locator by product name
@@ -55,6 +52,8 @@ public class ProductCards {
 
     /**
      * Method to get a list of product cards on the page
+     *
+     * @return the list of product cards on the page
      */
     public List<WebElement> getProductCardsList() {
         return productCardsList;
@@ -62,6 +61,8 @@ public class ProductCards {
 
     /**
      * Method to get the currency symbol of price cards
+     *
+     * @return the currency of product cards price on the page
      */
     public String getCurrencyOfProductCardsPrice() {
         String result = "";
@@ -89,6 +90,8 @@ public class ProductCards {
 
     /**
      * Method for checking the sorting of goods by price from high to low without discount
+     *
+     * @return boolean value of checking the sorting of goods by price from high to low without discount
      */
     public boolean areSortedFromHighToLowPricesWithoutDiscount() {
         boolean flag = false;
@@ -116,10 +119,11 @@ public class ProductCards {
     }
 
     /**
-     *
      * Method to check that the discount items have a percentage discount with the price before and after the discount
+     *
+     * @return string conteining information about products with discont
      */
-    public String infoAboutProductsWithDiscount() {
+    public String infoAboutProductsWithDiscont() {
         StringBuilder sb = new StringBuilder();
         for (WebElement we : getProductCardsList()) {
 
@@ -135,6 +139,8 @@ public class ProductCards {
 
     /**
      * Method to verify that the price before and after the discount matches the specified discount size
+     *
+     * @return boolean value of checking the price before and after the discount matches the specified discount size
      */
     public boolean checkingPricesConsideringDiscounts() {
         boolean flag = true;
@@ -165,6 +171,10 @@ public class ProductCards {
 
     /**
      * Method for rounding the number of float to a specified number of decimal places
+     *
+     * @return float value of number after rounding
+     * @param number is the float number which must be rounding
+     * @param scale is the number of digits after point to round
      */
     private float round(float number, int scale) {
         int pow = 10;
@@ -176,6 +186,8 @@ public class ProductCards {
 
     /**
      * Method for getting a string of the list of prices for product cards on the page with discount
+     *
+     * @return the string of the list of prices for product cards on the page with discount
      */
     public String getProductCardsPriceListWithDiscont() {
         StringBuilder sb = new StringBuilder();
@@ -188,6 +200,8 @@ public class ProductCards {
 
     /**
      * Method for getting a string of the list of prices of products on the page without discount
+     *
+     * @return the string of the list of prices for product cards on the page without discount
      */
     public String getProductCardsPriceListWithoutDiscount() {
         StringBuilder sb = new StringBuilder();

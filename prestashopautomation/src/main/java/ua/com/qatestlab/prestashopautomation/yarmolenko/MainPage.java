@@ -9,6 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
+/**
+ * The type MainPage to discribe of the main page
+ */
 public class MainPage {
 
     private WebDriver driver;
@@ -34,7 +37,9 @@ public class MainPage {
     }
 
     /**
-     * Method to get the symbol of the installed currency in the header of the site
+     * Method to get the searching result
+     *
+     * @param wordForSearch is the search string in product catalog
      */
     public SearchResultsPage searchInCatalog(String wordForSearch) {
         inputSearchField.sendKeys(wordForSearch);

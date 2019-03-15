@@ -9,30 +9,38 @@ import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import ua.com.qatestlab.prestashopautomation.yarmolenko.Header;
 import ua.com.qatestlab.prestashopautomation.yarmolenko.MainPage;
 import ua.com.qatestlab.prestashopautomation.yarmolenko.ProductCards;
 import ua.com.qatestlab.prestashopautomation.yarmolenko.SearchResultsPage;
 
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 
 public class PrestashopTest {
 
-    private static WebDriver driver;
+    private EventFiringWebDriver driver;
+
 
     @Before
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "webdriver\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        WebDriver chromeDriver = new ChromeDriver();
+        chromeDriver.manage().window().maximize();
+        driver = new EventFiringWebDriver(chromeDriver);
+        driver.register(new EventHandler());
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://prestashop-automation.qatestlab.com.ua/ru/");
     }
 
     @Test
-    public void testContents() throws InterruptedException {
+    public void testContents() {
         MainPage mainPage = new MainPage(driver);
         ProductCards productCards = new ProductCards(driver);
         Header header = new Header(driver);
@@ -89,9 +97,8 @@ public class PrestashopTest {
 
         System.out.println("-------------------------------------------------------------------------");
 
-        System.out.println(productCards.infoAboutProductsWithDiscount());
-        System.out.println("\n" +
-                "Check that the discounted products have a percentage discount with the price before"
+        System.out.println(productCards.infoAboutProductsWithDiscont());
+        System.out.println("Check that the discounted products have a percentage discount with the price before"
                 + " and after the discount");
 
         System.out.println("-------------------------------------------------------------------------");
@@ -109,5 +116,12 @@ public class PrestashopTest {
     @After
     public void tearDown() {
         driver.quit();
+        File logsFile = new File("ChromeLogs.txt");
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(logsFile))) {
+            bw.write(EventHandler.sb.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        EventHandler.sb = new StringBuilder();
     }
 }
