@@ -79,6 +79,7 @@ public class SearchResultsPage {
                     we.click();
                     WebDriverWait wait = (new WebDriverWait(driver, 10));
                     wait.until((ExpectedConditions.urlContains(url)));
+                    return;
                 }
             }
         } else {

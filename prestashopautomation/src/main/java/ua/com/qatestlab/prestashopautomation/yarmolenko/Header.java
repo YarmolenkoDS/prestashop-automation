@@ -67,6 +67,7 @@ public class Header {
             for (WebElement we : getDropDawnListOfCurrency()) {
                 if (we.getText().contains(currency)) {
                     we.click();
+                    return;
                 }
             }
         } else {
